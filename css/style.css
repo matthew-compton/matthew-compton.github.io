@@ -1,0 +1,55 @@
+html,body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto;
+	/* Negative indent footer by its height */
+	margin: 0 auto -60px;
+	/* Pad bottom by footer height */
+	padding: 0 0 60px;
+}
+
+/* Modify the title of the page */
+#title, .container {
+	font-family: 'Redressed', cursive;
+}
+
+/* Modify the size of the rows */
+.nav>li>a {
+	font-size: 180%;
+}
+
+/* Modify the content of the page */
+#content {
+	padding-top: 20px;
+}
+i {
+	padding-right: 15px;
+}
+
+/* Set the fixed height of the header here */
+#header {
+	height: 80px;
+	background-color: #428bca;
+}
+
+#wrap>.container {
+	padding: 60px 15px 0;
+}
+
+/* Set the fixed height of the footer here */
+.footer {
+	margin: 20px 0;
+}
+#footer {
+	height: 60px;
+	background-color: #428bca;
+}
+#footer>.container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
