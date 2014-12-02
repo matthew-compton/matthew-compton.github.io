@@ -9,4 +9,4 @@ I used Twitter Bootstrap 3.0.2, Font Awesome 4.0.3, and a bit of custom CSS/HTML
 
 Deployment
 --------------
-<http://www.ambergleam.net>
+<https://matthew-compton.github.io/>
