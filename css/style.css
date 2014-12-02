@@ -1,55 +1,157 @@
-html,body {
-	height: 100%;
-	/* The html and body elements cannot have any padding or margin. */
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
 }
 
-/* Wrapper for page content to push down footer */
-#wrap {
-	min-height: 100%;
-	height: auto;
-	/* Negative indent footer by its height */
-	margin: 0 auto -60px;
-	/* Pad bottom by footer height */
-	padding: 0 0 60px;
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
-/* Modify the title of the page */
-#title, .container {
-	font-family: 'Redressed', cursive;
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* Modify the size of the rows */
-.nav>li>a {
-	font-size: 180%;
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* Modify the content of the page */
-#content {
-	padding-top: 20px;
-}
-i {
-	padding-right: 15px;
+/* Padding for spacing */
+.inner {
+  padding: 20px;
 }
 
-/* Set the fixed height of the header here */
-#header {
-	height: 80px;
-	background-color: #428bca;
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-#wrap>.container {
-	padding: 60px 15px 0;
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  color: #99CC00;
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
 }
 
-/* Set the fixed height of the footer here */
-.footer {
-	margin: 20px 0;
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 20px;
 }
-#footer {
-	height: 60px;
-	background-color: #428bca;
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
 }
-#footer>.container {
-	padding-left: 15px;
-	padding-right: 15px;
+.cover-rule {
+  margin-bottom: 40px;
+}
+.lead > a {
+  text-decoration: underline;
+  border-bottom: 2px solid transparent;
+}
+.lead > a:hover,
+.lead > a:focus {
+  color: #99CC00;
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
 }
