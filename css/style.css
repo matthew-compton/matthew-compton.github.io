@@ -66,7 +66,7 @@ body {
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
-  color: #99CC00;
+  color: #FF8300;
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
@@ -88,7 +88,7 @@ body {
 }
 .lead > a:hover,
 .lead > a:focus {
-  color: #99CC00;
+  color: #FF8300;
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
