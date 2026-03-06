@@ -1,12 +1,11 @@
-Ambergleam.net
-==============
+# matthew-compton.github.io
 
-My personal website for projects, musings, and random tidbits.
+Personal profile site for Matthew Compton.
 
-Development
---------------
-I used Twitter Bootstrap 3.0.2, Font Awesome 4.0.3, and a bit of custom CSS/HTML.
+## Tech
 
-Deployment
---------------
+Static HTML/CSS hosted on GitHub Pages. No frameworks or external dependencies.
+
+## URL
+
 <https://matthew-compton.github.io/>

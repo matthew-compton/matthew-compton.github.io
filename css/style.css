@@ -1,3 +1,10 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Links */
 a,
 a:focus,
@@ -15,15 +22,24 @@ body {
 }
 body {
   color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
+hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+  margin: 20px 0;
+}
+
+/* Vertical and horizontal centering */
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
+  height: 100%;
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
@@ -43,11 +59,51 @@ body {
 }
 
 /*
- * Header
+ * Cover
  */
-.masthead-brand {
+.cover {
+  padding: 0 20px;
+}
+.cover-heading {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.lead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.lead > a {
+  text-decoration: underline;
+  border-bottom: 2px solid transparent;
+}
+.lead > a:hover,
+.lead > a:focus {
+  color: #FF8300;
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+/*
+ * Profile image
+ */
+.pic {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 4px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/*
+ * Nav links
+ */
+.masthead-nav {
+  list-style: none;
 }
 .masthead-nav > li {
   display: inline-block;
@@ -60,80 +116,54 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.8);
+  text-decoration: none;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   color: #1fb0ff;
   background-color: transparent;
-  border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
 
 /*
- * Cover
+ * Inline SVG icons
  */
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-.lead > a {
-  text-decoration: underline;
-  border-bottom: 2px solid transparent;
-}
-.lead > a:hover,
-.lead > a:focus {
-  color: #FF8300;
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.pic {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
 }
 
 /*
  * Footer
  */
 .mastfoot {
-  color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
 }
 
-
 /*
- * Affix and center
+ * Responsive
  */
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
   .mastfoot {
     position: fixed;
     bottom: 0;
   }
-  /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
   }
-  /* Handle the widths */
-  .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;
+  }
+  .lead {
+    font-size: 21px;
   }
 }
 
 @media (min-width: 992px) {
-  .masthead,
   .mastfoot,
   .cover-container {
     width: 700px;
